@@ -7,14 +7,11 @@
 
 using std::string;
 
-// DONE: Complete this helper function
 // INPUT: Long int measuring seconds
 // OUTPUT: HH:MM:SS
 // REMOVE: [[maybe_unused]] once you define the function
 string Format::ElapsedTime(long s) {
     std::chrono::seconds seconds{s};
-
-    // return std::chrono::format("%T", seconds); // in C++20 :-)
 
     std::chrono::hours hours =
         std::chrono::duration_cast<std::chrono::hours>(seconds);
